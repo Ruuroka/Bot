@@ -214,6 +214,88 @@ module.exports = naze = async (naze, m, chatUpdate, store) => {
 			const jwb_salam = ['Wa\'alaikumusalam','Wa\'alaikumusalam wr wb','Wa\'alaikumusalam Warohmatulahi Wabarokatuh']
 			m.reply(pickRandom(jwb_salam))
 		}
+
+		// pagi
+		if (/^(pagi|oagi|ohayo)(|)$/.test(budy?.toLowerCase())) {
+			const jwb_pagi = ['pagi','pagi lord','pagi sayang','oagi gengs','ohayo gozaimasu']
+			m.reply(pickRandom(jwb_pagi))
+		}
+		
+		
+		// intro
+		if (budy.toLowerCase() === '.intro') {
+    const introMessage = `
+ִֶ𓂃⊹ ִֶָ 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓚𝓸𝓶𝓲𝔂𝓾𝓴𝓲 𝓒𝓸𝓶𝓶𝓾𝓷𝓲𝓽𝔂 ִֶָ 𓂃★  ̟
+
+₊˚⊹♡ ɪɴᴛʀᴏ !! ‧₊˚ ❄️
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒏𝒂𝒎𝒂 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒖𝒎𝒖𝒓 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒈𝒆𝒏𝒅𝒆𝒓 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒂𝒔𝒂𝒍 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒊𝒈 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒂𝒏𝒊𝒎𝒆 𝒇𝒂𝒗 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒘𝒂𝒊𝒇𝒖/𝒉𝒖𝒔𝒃𝒖 :
+
+₊˚ ❄️⋅♡𓂃 ࣪ ִֶָ  𝒇𝒐𝒕𝒐 𝒄𝒐𝒔𝒑𝒍𝒂𝒚 :
+
+𝑯𝒂𝒗𝒆 𝒇𝒖𝒏 𝒊𝒏 𝒉𝒆𝒓𝒆 ♡ 
+𝒔𝒆𝒎𝒐𝒈𝒂 𝒃𝒆𝒕𝒂𝒉 𝒅𝒊 𝑲𝒐𝒎𝒊𝒚𝒖𝒌𝒊 𝒄𝒐𝒎𝒎𝒖𝒏𝒊𝒕𝒚 .ᐟ.ᐟ
+
+note: kalo npc tidak usah kirim foto ya!!`;
+
+    m.reply(introMessage);
+}
+// iya ga sayang?
+if (/^(ya ga sayang|ya gk sayang|ya kan sayang)(|)$/.test(budy?.toLowerCase())) {
+    const jwb_pagi_nonPremium = ['g'];
+    const jwb_pagi_premium = ['bener banget sayangkuh 🥰','betul banget tuh sayang 💖'];
+
+    // Cek apakah pengguna adalah premium
+    const isPremium = isCreator || prem.checkPremiumUser(m.sender, premium) || false;
+
+    if (isPremium) {
+        m.reply(pickRandom(jwb_pagi_premium));  // Balasan untuk user premium
+    } else {
+        m.reply(pickRandom(jwb_pagi_nonPremium));  // Balasan untuk user non-premium
+    }
+}
+
+// dah sayang
+if (/^(dah sayang|dadah sayang|dah sayang aku kuliah dulu ya|dah sayang aku kerja dulu ya)(|)$/.test(budy?.toLowerCase())) {
+    const jwb_pagi_nonPremium = ['yaudah sono, ora urus 😏'];
+    const jwb_pagi_premium = ['oke sayang hati hati dijalan yaa 🥰','oke nanti lagi ya sayang 💖'];
+
+    // Cek apakah pengguna adalah premium
+    const isPremium = isCreator || prem.checkPremiumUser(m.sender, premium) || false;
+
+    if (isPremium) {
+        m.reply(pickRandom(jwb_pagi_premium));  // Balasan untuk user premium
+    } else {
+        m.reply(pickRandom(jwb_pagi_nonPremium));  // Balasan untuk user non-premium
+    }
+}
+
+// halo sayang
+if (/^(halo sayang)(|)$/.test(budy?.toLowerCase())) {
+    const jwb_pagi_nonPremium = ['kamu siapa?','ga dulu deh'];
+    const jwb_pagi_premium = ['halo sayang 🥰','hai sayangkuu 💖'];
+
+    // Cek apakah pengguna adalah premium
+    const isPremium = isCreator || prem.checkPremiumUser(m.sender, premium) || false;
+
+    if (isPremium) {
+        m.reply(pickRandom(jwb_pagi_premium));  // Balasan untuk user premium
+    } else {
+        m.reply(pickRandom(jwb_pagi_nonPremium));  // Balasan untuk user non-premium
+    }
+}
 		
 		// Cek Expired
 		prem.expiredCheck(naze, premium);
