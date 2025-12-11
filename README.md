@@ -1,100 +1,96 @@
-# CATATAN ( NOTE )
-sc ini hanyalah hasil recode dari sc asli hisoka
-naze hanya menghilangkat bug, memperbagus & menyeting banyak hal
-agar tidak terjadi error
+## Information
 
-#NazeMD
-Script WhatsApp Bot Multi Device
+<div align="center">
+<a href="https://github.com/nazedev/hitori/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/nazedev/hitori?label=Watchers&color=green&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/network/members"><img title="Forks" src="https://img.shields.io/github/forks/nazedev/hitori?label=Forks&color=blue&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/nazedev/hitori?label=Stars&color=yellow&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/issues"><img title="Issues" src="https://img.shields.io/github/issues/nazedev/hitori?label=Issues&color=success&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/nazedev/hitori?label=Issues&color=red&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/nazedev/hitori?label=PullRequest&color=success&style=flat-square"></a>
+<a href="https://github.com/nazedev/hitori/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/nazedev/hitori?label=PullRequest&color=red&style=flat-square"></a>
+</div>
 
-## NOTE
-This Script is for everyone, not for Sale. Jika dijual neraka menunggumu brother !
+This script is created by [Nazedev](https://github.com/nazedev) using Node.js and the [WhiskeySocket/Baileys](https://github.com/WhiskeySockets/Baileys) library. The script is currently in the development phase (BETA), so there may still be some errors that can be ignored. If errors persist even after debugging, please contact the owner for assistance. ~ By Naze
 
-<p align="center">
-	<img src="https://telegra.ph/file/e661734204ce5f21b185b.png" width="35%" style="margin-left: auto;margin-right: auto;display: block;">
-</p>
-<h1 align="center">NAZE DEV</h1>
+## Contributor
 
-This is Script of WhatsApp multi device, working with [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
+- [NazeDev](https://github.com/nazedev) (Pembuat)
+- [Zaynn](https://github.com/ZaynRcK) (Penyedia Layanan API)
+- [Dani](https://github.com/nazedev) (Penyumbang Code)
 
-## My Project
-* New script to replace this script [`look here`](https://github.com/nazedev/naze-md) (`MULTI DEVICE `)
-* WhatsApp Bot normal [`DikaArdnt/Hisoka-Morrow`](https://github.com/DikaArdnt/Hisoka-Morrow) (SC ORI)
-* WhatsApp Bot Multi Device [`DikaArdnt/Hisoka-Morou`](https://github.com/DikaArdnt/Hisoka-Morou)
-* WhatsApp Bot Using Library whatsapp-web.js [`hisoka-waweb.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/)
+#### Join Group
+[![Grup WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/Hx9vcBVhbc04KLVGPFtH2R) 
 
+---
+#### Deploy to Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nazedev/hitori)
 
-## UNTUK PENGGUNA WINDOWS/RDP
+#### Heroku Buildpack
+| Build Pack | LINK |
+|--------|--------|
+| **NODEJS** | heroku/nodejs |
+| **FFMPEG** | [here](https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest) |
+| **WEBP** | [here](https://github.com/clhuang/heroku-buildpack-webp-binaries.git) |
+| **IMAGEMAGICK** | [here](https://github.com/DuckyTeam/heroku-buildpack-imagemagick) |
 
-* Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
-* Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
-* Unduh & Instal FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
-
+---
+## For Windows/VPS/RDP User
+* Download And Install Git [`Click Here`](https://git-scm.com/downloads)
+* Download And Install NodeJS [`Click Here`](https://nodejs.org/en/download)
+* Download And Install FFmpeg [`Click Here`](https://ffmpeg.org/download.html) (**Don't Forget Add FFmpeg to PATH enviroment variables**)
+* Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
 
 ```bash
-git clone https://github.com/nazedev/naze-md
-cd naze
+git clone https://github.com/nazedev/hitori
+cd hitori
+npm install
+npm update
+```
+---
+## For Termux/Ubuntu/SSH User
+```bash
+pkg update && pkg upgrade
+pkg install git
+pkg install nodejs
+pkg install ffmpeg
+pkg install imagemagick
+git clone https://github.com/nazedev/hitori
+cd hitori
 npm install
 ```
 
-## HOW TO CONNECT TO MONGODB WHEN RUN IN HEROKU
-
-* Create account and database in mongodb atlas [`watch here`](https://youtu.be/w1iMJS0ib-w)
-* when you already have a database, you just need to take mongourl
-* Put mongourl in Procfile `web: node . --db 'mongourl'`
-* Example `web: node . -- db 'Your Mongo URI'`
-
-
-
-## FOR TERMUX/UBUNTU/SSH USER
-
-```bash
-apt update && apt upgrade
-apt install git -y
-apt install nodejs -y
-apt install ffmpeg -y
-git clone https://github.com/nazedev/naze-md
-cd naze
-npm install
-```
-
-## RECOMMENDED INSTALL ON TERMUX
-
+[ RECOMMENDED INSTALL ON TERMUX ]
 ```bash
 pkg install yarn
 yarn
 ```
 
-## Installing
+---
+
+## Run
 ```bash
-$ node .
+node .
 ```
+---
 
-## ❗ Warning
-Bot WhatsApp masih dalam tahap pengembangan, jadi ada beberapa bug
-Koneksi WhatsApp (BETA, tidak berfungsi dengan sempurna)
+### Connection Options
+- Support Qr Code
+- Support Pairing Code
+---
 
-Editing Number Owner in [`config.js`](https://github.com/nazedev/naze-md/blob/main/config.js)
-Get Apikey zenz on [`zenz`](https://zenzapi.xyz/pricing)
-
-
-## Thanks To
-* [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
-* [`Nurutomo`](https://github.com/Nurutomo)
-* [`Mhankbarbar`](https://github.com/MhankBarBar)
-* [`Faiz`](https://github.com/FaizBastomi)
-* [`Gimenz`](https://github.com/Gimenz)
-* [`rayy`](https://github.com/rayyreall)
-* [`Fatih Arridho`](https://github.com/FatihArridho)
-* [`zhwzein`](https://github.com/zhwzein)
-* [`CAF-ID`](https://github.com/CAF-ID)
-* [`bintang`](https://github.com/Bintangp02)
-* [`ArullOfc`](https://github.com/Warikrr)
-* [`Naze Dev`](https://github.com/nazedev)
-
-```Thanks to all who have participated in the development of this script```
+### Features
+| Menu     | Bot | Group | Search | Download | Tools | Ai | Game | Fun | Owner |
+| -------- | --- | ----- | ------ | -------- | ----- | -- | ---- | --- | ----- |
+| Work     |  ✅  |   ✅   |    ✅    |     ✅     |   ✅   | ✅ |   ✅   |  ✅  |    ✅    |
 
 
-License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
+License: [MIT](https://choosealicense.com/licenses/mit/)
 
-Support Me:
-* [`Saweria`](https://saweria.co/naze)
+#### Support Me
+- [Saweria](https://saweria.co/naze)
+
+## Thanks to
+
+| [![Nazedev](https://github.com/nazedev.png?size=100)](https://github.com/nazedev) | [![Zaynn](https://github.com/ZaynRcK.png?size=100)](https://github.com/ZaynRcK) | [![Dani](https://github.com/nazedev.png?size=100)](https://github.com/nazedev) | [![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets) |
+| --- | --- | --- | --- |
+| [NazeDev](https://github.com/nazedev) | [Zaynn](https://github.com/ZaynRcK) | [Dani](https://github.com/dani) | [WhiskeySockets](https://github.com/WhiskeySockets) |
